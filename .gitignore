@@ -33,7 +33,4 @@ node_modules
 # Ignore Database
 db/
 
-# Ignore Stylesheet
-/public/styles/site.css
-
 .jshintrc
