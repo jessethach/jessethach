@@ -75,10 +75,10 @@ keystone.set('email locals', {
 
 keystone.set('email rules', [{
 	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.jessethach.herokuapp.com/images/' : 'http://localhost:3000/images/'
+	replace: (keystone.get('env') == 'production') ? 'http://www.jessethach.com/images/' : 'http://localhost:3000/images/'
 }, {
 	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.jessethach.herokuapp.com/keystone/' : 'http://localhost:3000/keystone/'
+	replace: (keystone.get('env') == 'production') ? 'http://www.jessethach.com/keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes
