@@ -2,14 +2,130 @@ extends ../layouts/default
 
 block content
 	.container: .section
-		h1 Welcome
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>jessethach@gmail.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
+		section.container
+			section.columns.is-mobile
+				section.column
+					h2.title Profile
+			section.columns.is-mobile
+				section.column
+					p I am a software developer with 5 years of start-up experience. I enjoy building wonderful products within agile environments.
+			section.columns.is-mobile
+				section.column
+					h2.title Technical Skills
+			section.columns.is-mobile
+				section.column
+					p Proficiency in HTML, CSS, JavaScript, JQuery, Git, Node.js, Angular, React, Bootstrap, Express, Hapi, MongoDB, Mongoose, SQL, Test-Driven Development (Mocha/Chai/Karma/Jasmine/Gulp), Object-Oriented programming, Adobe Creative Suite 
+					p Currently growing in Python, Ruby, WebVR
+					
+			//Education
+			section.columns.is-mobile
+				section.column
+					h2.title Education
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Code Fellows
+				section.column.is-4
+					p.title.is-5 Oct 2015 – Mar 2016
+			section.columns.is-mobile
+				section.column
+					p <strong>Certification</strong>, Advanced Software Development in Full-Stack JavaScript. 
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 University of Washington
+				section.column.is-4
+					p.title.is-5 Sep 2007 – Jun 2011
+			section.columns.is-mobile
+				section.column
+					p <strong>B.A.</strong>, Political Science with minors in Human Rights and LSJ.
+					
+			//Projects
+			section.columns.is-mobile
+				section.column
+					h2.title Projects
+			section.columns.is-mobile
+				section.column.is-7
+					a.subtitle(href='https://spacecataz.herokuapp.com/#/' target='_blank') Spacecataz
+				section.column.is-4
+					p.title.is-5 2016
+			section.columns.is-mobile
+				section.column.is-text-left
+					p • A full-stack application that ports an open source space-shooter game.
+					p • Built in JavaScript, Angular, Node with Express, Pixijs, Bulma.io.
+					p • I built server-side routing and the client-side authorization. I also made stylistic and UX design decisions that would manage the user experience outside of the game.
+			section.columns.is-mobile
+				section.column.is-7
+					a.subtitle(href='https://github.com/saphero/sphero-hack' target='_blank') Saphero
+				section.column.is-4
+					p.title.is-5 2016
+			section.columns.is-mobile
+				section.column.is-text-left
+					p • A client-side dashboard to easily connect and control Sphero/BB-8/Ollie devices.
+					p •	Built in JavaScript and Node with Express, Flot, Home-Config, Jade, Lodash, Noble, Opn, Serialport, Socket.io, Sphero, Sweetalert.
+					p • I helped developed script to connect to BB8 devices using Noble’s Bluetooth library and setup the data for graphing the accelerometer and speedometer using socket emitters and listeners.
+			section.columns.is-mobile
+				section.column.is-7
+					a.subtitle(href='https://sun-spots.herokuapp.com' target='_blank') Sun-Spots
+				section.column.is-4
+					p.title.is-5 2015
+			section.columns.is-mobile
+				section.column.is-text-left
+					p •	A website deployed on Heroku that calculates the ROI for Washington State based solar panels.
+					p •	Built in JavaScript with JQuery, Chartjs, Pagejs, Bootstrap.
+					p •	I built the calculation rendering section and designed the site using the Bootstrap framework.
+			section.columns.is-mobile
+				section.column
+					h2.title Experience
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Web Developer, Freelance, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Jun 2014 – Oct 2015
+			section.columns.is-mobile
+				section.column.is-text-left
+					p •	Consulted and developed static sites for small businesses – built using HTML, CSS, and PHP.
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Dwellable, Partnerships Associate, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Jun 2014 – Oct 2015
+			section.columns.is-mobile
+				section.column.is-text-left
+					p •	Designed and mocked product improvements to vendor-side admin tools and bookings engine.
+					p •	Coordinated projects related to ecommerce, customer service, B2B marketing, reporting, and product management.
+					p •	Company was acquired by HomeAway in October 2015.
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Web Developer, Laura Urban-Perry Designs, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Apr 2013 – Jun 2014
+			section.columns.is-mobile
+				section.column.is-text-left
+					p •	Coordinated and built sites in WordPress, Squarespace, and Adobe Creative Suite.
+					p •	Developed strategies to optimize user experience and implemented wire frames for web mock-ups.
+					p •	Communicated with stakeholders and managed several web properties until launch of final product.
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Production Engineer, Wavii, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Feb 2012 – Apr 2013
+			section.columns.is-mobile
+				section.column.is-text-left
+					p •	Responsible for product and web content management under a wide range of verticals.
+					p •	Used Photoshop to edit and add thousands of images to the site and worked with engineers to test administrative tools.
+					p •	Company was acquired by Google in April 2013.
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Enrichment Teacher, CDSA, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Oct 2011 – Feb 2012
+			section.columns.is-mobile
+				section.column.is-7
+					p.title.is-5 Content and Outreach Associate, Stripes39, Seattle, WA
+				section.column.is-4
+					p.title.is-5 Aug 2011 – Oct 2011
+				
+
+				//- ul
+				//- 	each link in navLinks
+				//- 		li(class=(section == link.key ? 'is-active' : null)): a(href=link.href)= link.label
 		hr

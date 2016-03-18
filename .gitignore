@@ -36,7 +36,4 @@ db/
 # Ignore Stylesheet
 /public/styles/site.css
 
-# Ignore Admin code
-updates/*admins.js
-
 .jshintrc

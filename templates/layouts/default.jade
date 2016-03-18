@@ -14,6 +14,7 @@ html
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
 		link(href="/styles/site.css", rel="stylesheet")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -46,11 +47,15 @@ html
 					header.header
 						section.container
 							section.header-left
-								p.header-item Logo
+								span.header-item
+									a.button.is.-info.is-outlined.is-inverted(href='https://github.com/jessethach' target='_blank')
+										i.fa.fa-github
+										|  GitHub
+									//- p.header-item Logo
 							section.header-right.header-menu
 								if user
 									if user.canAccessKeystone
-										p.header-item: a(href='/keystone') Open Keystone
+										p.header-item: a(href='/keystone') Dashboard
 									p.header-item: a(href='/keystone/signout') Sign Out
 								else
 									p: a(href='/keystone/signin') Sign In
@@ -87,7 +92,7 @@ html
 
 
 		//- FOOTER
-		.container: .footer
+		footer.section.footer
 
 
 
