@@ -1,7 +1,7 @@
 extends ../layouts/default
  
 mixin post(post) 
-  section.columns.is-mobile(data-ks-editable=editable(user, { list: 'Work', id: post.id }))
+  section.section.columns.is-mobile(data-ks-editable=editable(user, { list: 'Work', id: post.id }))
     //post image
     section.column.is-half
       if post.image.exists
@@ -10,7 +10,7 @@ mixin post(post)
           
       //post content
     section.column.is-half
-      h2: a(href='/work/post/' + post.slug)= post.title
+      h2.subtitle: a(href='/work/post/' + post.slug)= post.title
       p!= post.content.brief
       
       if post.content.extended
