@@ -1,21 +1,19 @@
 extends ../layouts/default
  
 block content 
-    .container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-        article
-            p: a(href='/work') ← back to the work
-            hr
-            if data.post.image.exists
-                .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
-            if !data.post
-                h2 Invalid Post.
-            else
-                header
-                    h1= data.post.title
-                    h5 Posted
-                        if data.post.publishedDate
-                            |  on #{data.post._.publishedDate.format('MMMM Do, YYYY')}
-                        if data.post.author
-                            |  by #{data.post.author.name.first}
-                .post
-                    != data.post.content.full
+  .container: .section
+    p: a(href='/work') ← back to the work
+    article.columns.is-mobile
+      section.column.is-8.is-offset-2
+        
+        hr
+        if data.post.image.exists
+          .image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
+        if !data.post
+          h2 Invalid Post.
+        else
+          hr
+          header
+            h1.subtitle= data.post.title
+          article.section.post
+            != data.post.content.full
